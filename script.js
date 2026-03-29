@@ -275,7 +275,7 @@ function startGUI () {
     let appIcon = document.createElement('span');
     app.domElement.parentElement.appendChild(appIcon);
     appIcon.className = 'icon app';
-
+    dat.GUI.toggleHide();
     if (isMobile())
         gui.close();
 }

@@ -1550,6 +1550,10 @@ function checkLastMove() {
 }
 
 canvas.addEventListener("mousemove", (e) => {
+  if (e.buttons !== 1) {
+        updatePointerUpData(pointers[0]);
+        return; 
+    }
   if (checkLastMove()) {
     let posX = scaleByPixelRatio(e.offsetX);
     let posY = scaleByPixelRatio(e.offsetY);
